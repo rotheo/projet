@@ -16,8 +16,4 @@ jobs:
           # Write your CML report
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
-      - name: execDocker
-        run: |
-          docker images
-          docker ps
-          docker exec -t 7c865cabe71b /bin/sh
+    
