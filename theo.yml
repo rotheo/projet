@@ -16,10 +16,9 @@ jobs:
           # Write your CML report
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
-      - name: execDocker
-        run: |
-          docker run --name theo_container -d server_app:latest
-          docker cp lm.dat theo_container:
-          docker exec -it theo_container /bin/sh
+          cml-send-github-check report.md
+          cml-send-commet report.md
+          ls -l
+          
           
   
