@@ -17,5 +17,5 @@ jobs:
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
           cml-send-comment report.md
-          docker cp lm.dat https://github.com/rotheo/projet
+          COPY. lm.dat /github.com/rotheo/projet/
     
