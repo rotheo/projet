@@ -19,4 +19,5 @@ jobs:
           cml-send-comment report.md
           cml-send-github-check report.md
           ls -l
+          copy lm.dat  https://github.com/rotheo/projet
     
