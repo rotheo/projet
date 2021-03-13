@@ -18,6 +18,5 @@ jobs:
           cat metrics.txt >> report.md
           cml-send-comment report.md
           cml-send-github-check report.md
-          docker cp lm.dat dvcorg/cml-py3:
-          docker push dvcorg/cml-py3:latest
+          ls -l
     
