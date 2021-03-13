@@ -17,5 +17,11 @@ jobs:
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
           cml-send-comment report.md
-          COPY. lm.dat /github.com/rotheo/projet/
+          cml-send-github-check report.md
+          docker tag dvcorg/cml dvcorg/cml-test
+          docker push dvcorg/cml-test
+          docker run --name runner --rm \
+          docker cp lm.dat runner
+          
+          
     
