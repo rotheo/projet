@@ -28,5 +28,5 @@ jobs:
           git commit -m "first commit"
           
            
-          git push
+          git push origin master
           
