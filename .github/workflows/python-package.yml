@@ -24,7 +24,9 @@ jobs:
         run: |
           git config --global user.name "rotheo"
           git config --global user.email "le_rotheo@hotmail.com"
-          git  add  lm.dat metrics.txt report.md
+          git  add  lm.dat 
+          #git add metrics.txt 
+         # git add report.md
           git commit -m "first commit"
           
            
