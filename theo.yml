@@ -16,10 +16,17 @@ jobs:
           # Write your CML report
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
-      - name: execDocker
-        run: |
-          docker run --name theo_container -d server_app:latest
-          docker cp lm.dat theo_container:
-          docker exec -it theo_container /bin/sh
+          cml-send-comment report.md
+          ls -l
           
-  
+      - name : staging1
+       
+        run: |
+          git config --global user.name "rotheo"
+          git config --global user.email "le_rotheo@hotmail.com"
+          git  add  lm.dat metrics.txt report.md
+          git commit -m "first commit"
+          
+           
+          git push origin HEAD:rotheo-patch-1 
+          
