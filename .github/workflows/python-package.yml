@@ -19,14 +19,14 @@ jobs:
           cml-send-comment report.md
           ls -l
           
-      - name : staging1
+      - name : staging
        
         run: |
           git config --global user.name "rotheo"
           git config --global user.email "le_rotheo@hotmail.com"
           git  add  lm.dat 
           #git add metrics.txt 
-         # git add report.md
+          #git add report.md
           git commit -m "first commit"
           
            
