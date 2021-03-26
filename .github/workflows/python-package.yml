@@ -17,7 +17,16 @@ jobs:
           echo "## Metriques:" >> report.md
           cat metrics.txt >> report.md
           cml-send-comment report.md
-          cml-send-github-check report.md
           ls -l
-          copy lm.dat  https://github.com/rotheo/projet
-    
+          
+      - name : staging1
+       
+        run: |
+          git config --global user.name "rotheo"
+          git config --global user.email "le_rotheo@hotmail.com"
+          git  add  lm.dat metrics.txt report.md
+          git commit -m "first commit"
+          
+           
+          git push origin HEAD: main
+          
